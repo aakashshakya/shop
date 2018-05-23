@@ -25,7 +25,7 @@ public class DefaultController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(Model model) {
-        model.addAttribute("model", "Shop project and its the begining.");
+        model.addAttribute("name", "Shop project and its the begining.");
         return "index";
     }
 }
