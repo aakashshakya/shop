@@ -24,15 +24,7 @@ public class DefaultController {
     private JdbcTemplate jdbcTemplate;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String index(Model model) {
-        model.addAttribute("name", "Shop Project");
-
-        String sql = "Create table users(id serial primary key, "
-                + "username varchar(50), password varchar(50), "
-                + "email varchar(50), added_date timestamp "
-                + "default current_timestamp, status boolean)";
-        int result = jdbcTemplate.update(sql);
-        System.out.println("Query Execution result: "+result);
+    public String index() {
         return "index";
     }
 }
