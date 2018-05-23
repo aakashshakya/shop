@@ -24,7 +24,8 @@ public class DefaultController {
     private JdbcTemplate jdbcTemplate;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("model", "Shop project and its the begining.");
         return "index";
     }
 }
